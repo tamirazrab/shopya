@@ -1,8 +1,11 @@
+import ProductPageContent from "../../Components/ProductPageContent"
 import { getAllProducts, getProduct } from "../../lib/shopify"
 
 export default function ProductPage({ product }) {
   return (
-    <div>{product.title}</div>
+    <div>
+      <ProductPageContent product={product} />
+    </div>
   )
 }
 
@@ -14,7 +17,7 @@ export async function getStaticPaths() {
     const handle = String(product.node.handle)
 
     return {
-      params: { product : handle }
+      params: { product: handle }
     }
   })
 
