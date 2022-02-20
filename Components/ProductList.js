@@ -1,4 +1,4 @@
-import { ProductCard } from "../Components/ProductCard"
+import { ProductCard } from "./ProductCard"
 export const ProductList = ({ products }) => {
   return (
     <div className="bg-white">
